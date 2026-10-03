@@ -1,0 +1,218 @@
+@server=http://localhost:4004
+@username=alice
+@password=
+
+
+### Buses
+# @name Buses_GET
+GET {{server}}/odata/v4/bus-booking/Buses
+Authorization: Basic {{username}}:{{password}}
+
+
+### Buses
+# @name Buses_POST
+POST {{server}}/odata/v4/bus-booking/Buses
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+      
+      "validFrom": "2026-09-01T00:00:00.000Z",
+      "validTo": "2026-12-31T23:59:59.000Z",
+      "status": "available",
+      "busNumber": "TS09CB1234",
+      "source": "Hyderabad",
+      "destination": "Bangalore",
+      "busType": "AC Sleeper",
+      "departureDateTime": "2026-10-01T06:00:00.000Z",
+      "arrivalDateTime": "2026-10-01T14:00:00.000Z"
+}
+
+
+### Buses
+# @name Buses_PATCH
+PATCH {{server}}/odata/v4/bus-booking/Buses/20299503-f09a-4cdf-8d73-1971bc57862b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "20299503-f09a-4cdf-8d73-1971bc57862b",
+  "busNumber": "busNumber-20299503",
+  "source": "source-20299503",
+  "destination": "destination-20299503",
+  "busType": "busType-20299503",
+  "departureDateTime": "2011-05-31T00:00:00.000Z",
+  "arrivalDateTime": "2001-04-03T00:00:00.000Z",
+  "seats": [
+    {
+      "ID": "27997926-6790-442c-9632-3963b2df5d4b",
+      "seatNo": "o-27997926",
+      "amount": 51514008.4,
+      "seatType": "seatType-27997926",
+      "BusNumber": "BusNumber-27997926",
+      "status": "status-27997926"
+    },
+    {
+      "ID": "27997927-a32b-4169-bb26-6fc06df31775",
+      "seatNo": "o-27997927",
+      "amount": 1759697.41,
+      "seatType": "seatType-27997927",
+      "BusNumber": "BusNumber-27997927",
+      "status": "status-27997927"
+    }
+  ],
+  "validFrom": "2013-06-10T00:00:00.000Z",
+  "validTo": "2013-04-12T00:00:00.000Z",
+  "status": "status-20299503"
+}
+
+
+### Buses
+# @name Buses_DELETE
+DELETE {{server}}/odata/v4/bus-booking/Buses/20299503-f09a-4cdf-8d73-1971bc57862b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Seats
+# @name Seats_GET
+GET {{server}}/odata/v4/bus-booking/Seats
+Authorization: Basic {{username}}:{{password}}
+
+
+### Seats
+# @name Seats_POST
+POST {{server}}/odata/v4/bus-booking/Seats
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+      
+      
+      "seatNo": "g1",
+      "amount": "500.00",
+      "seatType": "Window",
+      "bus_ID": "8f3a2c10-7b45-4d91-a632-19e5c84720ab"
+      
+}
+
+
+### Seats
+# @name Seats_PATCH
+PATCH {{server}}/odata/v4/bus-booking/Seats/27997926-6790-442c-9632-3963b2df5d4b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "27997926-6790-442c-9632-3963b2df5d4b",
+  "seatNo": "o-27997926",
+  "amount": 51514008.4,
+  "seatType": "seatType-27997926",
+  "BusNumber": "BusNumber-27997926",
+  "status": "status-27997926"
+}
+
+
+### Seats
+# @name Seats_DELETE
+DELETE {{server}}/odata/v4/bus-booking/Seats/27997926-6790-442c-9632-3963b2df5d4b
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Bookings
+# @name Bookings_GET
+GET {{server}}/odata/v4/bus-booking/Bookings
+Authorization: Basic {{username}}:{{password}}
+
+
+### Bookings
+# @name Bookings_POST
+POST {{server}}/odata/v4/bus-booking/Bookings
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "18349998-873c-46df-8b37-c443b0407341",
+  "bus": {
+    "ID": "20299503-f09a-4cdf-8d73-1971bc57862b"
+  },
+  "seat": {
+    "ID": "27997927-a32b-4169-bb26-6fc06df31775"
+  },
+  "passenger": {
+    "ID": "15954169-fc41-4b74-99ce-5ec772d23507"
+  },
+  "bookingDateTime": "2009-08-16T00:00:00.000Z"
+}
+
+
+### Bookings
+# @name Bookings_PATCH
+PATCH {{server}}/odata/v4/bus-booking/Bookings/18349998-873c-46df-8b37-c443b0407341
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "18349998-873c-46df-8b37-c443b0407341",
+  "bus": {
+    "ID": "20299503-f09a-4cdf-8d73-1971bc57862b"
+  },
+  "seat": {
+    "ID": "27997927-a32b-4169-bb26-6fc06df31775"
+  },
+  "passenger": {
+    "ID": "15954169-fc41-4b74-99ce-5ec772d23507"
+  },
+  "bookingDateTime": "2009-08-16T00:00:00.000Z"
+}
+
+
+### Bookings
+# @name Bookings_DELETE
+DELETE {{server}}/odata/v4/bus-booking/Bookings/18349998-873c-46df-8b37-c443b0407341
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+
+### Passengers
+# @name Passengers_GET
+GET {{server}}/odata/v4/bus-booking/Passengers
+Authorization: Basic {{username}}:{{password}}
+
+
+### Passengers
+# @name Passengers_POST
+POST {{server}}/odata/v4/bus-booking/Passengers
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15954169-fc41-4b74-99ce-5ec772d23507",
+  "name": "name-15954169",
+  "age": 43,
+  "email": "email-15954169",
+  "mobile": "e-15954169"
+}
+
+
+### Passengers
+# @name Passengers_PATCH
+PATCH {{server}}/odata/v4/bus-booking/Passengers/15954169-fc41-4b74-99ce-5ec772d23507
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}
+
+{
+  "ID": "15954169-fc41-4b74-99ce-5ec772d23507",
+  "name": "name-15954169",
+  "age": 43,
+  "email": "email-15954169",
+  "mobile": "e-15954169"
+}
+
+
+### Passengers
+# @name Passengers_DELETE
+DELETE {{server}}/odata/v4/bus-booking/Passengers/15954169-fc41-4b74-99ce-5ec772d23507
+Content-Type: application/json
+Authorization: Basic {{username}}:{{password}}

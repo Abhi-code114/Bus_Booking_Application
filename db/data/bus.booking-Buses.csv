@@ -1,0 +1,4 @@
+ID,busNumber,source,destination,busType,departureDateTime,arrivalDateTime,validFrom,validTo,status
+8f3a2c10-7b45-4d91-a632-19e5c84720ab,TS09AB1234,Hyderabad,Bangalore,AC Sleeper,2026-10-01T06:00:00,2026-10-01T14:00:00,2026-09-01T00:00:00,2026-12-31T23:59:59,available
+c2719e54-3a86-4f20-b751-62d9a8e413bc,TS10CD5678,Hyderabad,Vijayawada,AC Seater,2026-10-02T07:30:00,2026-10-02T12:00:00,2026-09-01T00:00:00,2026-12-31T23:59:59,available
+a694d382-1f57-48c3-9e26-75b4c0186d2f,BG01EF9012,Bangalore,Chennai,Non-AC Sleeper,2026-10-03T21:00:00,2026-10-04T06:00:00,2026-09-01T00:00:00,2026-12-31T23:59:59,available

@@ -1,0 +1,28 @@
+{
+  "name": "bus-bookings",
+  "version": "1.0.0",
+
+  "dependencies": {
+    "@cap-js/hana": "^3",
+    "@sap/cds": "^10"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^3",
+    "@sap/cds-dk": "^10"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "[development]": {
+        "kind": "sqlite"
+      },
+      "[production]": {
+        "kind": "hana"
+      },
+      "auth": "mocked"
+    }
+  },
+  "private": true
+}
